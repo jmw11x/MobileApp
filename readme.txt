@@ -2,7 +2,7 @@ Welcome to mobile app programming
 
 **Full web code in main**
   -> open index.html for first page after downloading the files and putting it into an empty folder;
-  Can also click either of these links to go to my hosted website
+  Can also copy either of these links to go to my hosted website into any browser
   -> url : mobileapphw1.firebaseapp.com
   ->web app : mobileapphw1.web.app
   
