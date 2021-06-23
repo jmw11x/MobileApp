@@ -35,6 +35,8 @@ dependencies:
   intl: ^0.16.1
   shared_preferences: ^2.0.6
   flutter_native_splash: ^0.2.8
+  flutter_facebook_login: ^3.0.0
+
   
 flutter_native_splash:
   color: 'ffffff'

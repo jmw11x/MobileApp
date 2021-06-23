@@ -75,6 +75,7 @@ class _AdminState extends State<Admin> {
         body: Column(
           children: [
             SingleChildScrollView(
+              padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 50.0),
               child: ElevatedButton(
                   child: Text('+'),
                   onPressed: () async {
@@ -82,7 +83,7 @@ class _AdminState extends State<Admin> {
                     db.addAdminMessage(message);
                   }),
             ),
-            Container(
+            SingleChildScrollView(
               child: Text(msg),
             )
           ],

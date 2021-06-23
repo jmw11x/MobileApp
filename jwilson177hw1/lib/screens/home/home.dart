@@ -14,10 +14,11 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   final AuthService _auth = AuthService();
   AdminAlert db = new AdminAlert();
+  String msg = '';
   @override
   Widget build(BuildContext context) {
     Future<String> msgs = db.getMessagesAsString();
-    String msg;
+
     msgs.then((value) => setState(() {
           msg = value;
         }));
@@ -37,8 +38,13 @@ class _HomeState extends State<Home> {
             ),
           ],
         ),
-        body: SingleChildScrollView(
-          child: Text(msg),
+        body: Column(
+          children: [
+            SingleChildScrollView(
+              padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 50.0),
+              child: Text(msg),
+            )
+          ],
         ));
   }
 }

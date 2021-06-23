@@ -9,8 +9,8 @@ class AdminAlert {
     await messages.getDocuments().then((message) {
       message.documents.forEach((value) {
         if (value['message'] != null) {
-          print(value['message']);
-          msgs = msgs + (value['message']);
+          // print(value['message']);
+          msgs = msgs + (value['message']) + "\n";
         }
       });
     });

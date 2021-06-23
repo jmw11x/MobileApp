@@ -61,7 +61,7 @@ class _SignInState extends State<SignIn> {
                 onChanged: (v) => {setState(() => password = v)},
               ),
               ElevatedButton(
-                  child: Text('Login'),
+                  child: Text('Login with email/pw'),
                   onPressed: () async {
                     if (_formKey.currentState!.validate()) {
                       dynamic res = await _auth.signinWithEmailAndPassword(
@@ -70,7 +70,18 @@ class _SignInState extends State<SignIn> {
                     } else {
                       print("fail");
                     }
-                  })
+                  }),
+              ElevatedButton(
+                  child: Text('Login with email/pw'),
+                  onPressed: () async {
+                    if (_formKey.currentState!.validate()) {
+                      dynamic res = await _auth.signinWithEmailAndPassword(
+                          email, password);
+                      res == null ? print("error") : print("success");
+                    } else {
+                      print("fail");
+                    }
+                  }),
             ],
           ),
         ),
