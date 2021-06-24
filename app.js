@@ -1,4 +1,4 @@
-// Authors: Jacob Wilson, Kevin Nguyen
+// Authors: Jacob Wilson
 
 //declare text and Button
 const textBox = document.getElementById("textbox");
