@@ -3,8 +3,8 @@
 # Full web code in main
   -> open index.html for first page after downloading the files and putting it into an empty folder;
   Can also copy either of these links to go to my hosted website into any browser
-  -> url : mobileapphw1.firebaseapp.com
-  ->web app : mobileapphw1.web.app
+  ## url : mobileapphw1.firebaseapp.com
+  ## web app : mobileapphw1.web.app
   
 
 # Full flutter code in master branch* -> Fully cocnfigured project except facebook login. Can run in a nexus6P api 24 android emulator.
