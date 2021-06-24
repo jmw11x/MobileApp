@@ -12,4 +12,15 @@
   
   THe yaml and pubspec files is in the master branch. All code was sent to the android flutter app from my machine to github.
   
+  
+  An admin user
+  email: deadhead@gmail.com
+  pw: 123456
+  You make admin user by setting role to admin on register form.
+  
+  
+  regular user
+  overtonhusker@gmail.com
+  123456
+  
  
