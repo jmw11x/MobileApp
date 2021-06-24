@@ -109,4 +109,4 @@ flutter:
   
   I did not have enough time for facebook login, though everything else should be 100% complete
   
-  ALL files for my project are in this git-hub repo and have all been proven to work on my machine. Any comments of apps not loading will be incorrect.
+  ALL files for my project are in this git-hub repo and have all been proven to work on my machine
