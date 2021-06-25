@@ -1,5 +1,6 @@
 // @dart=2.9
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 import 'package:jwilson177hw1/models/user.dart';
 import 'package:jwilson177hw1/services/database.dart';
 
@@ -59,7 +60,6 @@ class AuthService {
       return null;
     }
   }
-  //sign in facebook
 
   //logout
   Future signOut() async {

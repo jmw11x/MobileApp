@@ -1,4 +1,6 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 // ignore: import_of_legacy_library_into_null_safe
 import 'package:jwilson177hw1/services/auth.dart';
 
@@ -71,10 +73,47 @@ class _SignInState extends State<SignIn> {
                       print("fail");
                     }
                   }),
+              ElevatedButton(
+                  child: Text('Login with Google'),
+                  onPressed: () async {
+                    if (_formKey.currentState!.validate()) {
+                      _googleSignUp();
+                      // res == null ? print("error") : print("success");
+                    } else {
+                      print("fail");
+                    }
+                  }),
             ],
           ),
         ),
       ),
     );
+  }
+}
+
+//sign in google
+Future _googleSignUp() async {
+  try {
+    final GoogleSignIn _googleSignIn = GoogleSignIn(
+      scopes: ['email'],
+    );
+    final FirebaseAuth _auth = FirebaseAuth.instance;
+
+    final GoogleSignInAccount googleUser = await _googleSignIn.signIn();
+    final GoogleSignInAuthentication googleAuth =
+        await googleUser.authentication;
+
+    final AuthCredential credential = GoogleAuthProvider.getCredential(
+      accessToken: googleAuth.accessToken,
+      idToken: googleAuth.idToken,
+    );
+
+    final FirebaseUser user =
+        (await _auth.signInWithCredential(credential)).user;
+    print("signed in " + user.displayName);
+
+    return user;
+  } catch (e) {
+    print(e.toString());
   }
 }
